@@ -1,6 +1,7 @@
 :root{
-    --main-col: rgb(133,43,226);
-
+    --main-col: rgb(69, 6, 46);
+    --fill-col: rgb(127, 5, 95);
+    --second-col: rgb(229, 164, 203);
 }
 
 
@@ -35,37 +36,21 @@ footer{
     margin: 80px;
 
 }
-div{
-    .grid{
-        display grid;
-        grid-template-areas: 
-        "a c"
-        "b c"
-        gap: 10px;
-        margin:30px;
-    }
-    
-    .first{
-        grid-area: a;
-        background-color: blue;
-    }
+.navigationbar{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--second-col);
+    padding: 15px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+.navigationbar a{
+    color: var(--fill-col);
+    text-decoration: none;
+    font-weight: bold;
 
-    .second{
-        grid-area: b;
-        background-color: brown;
-    }
-    .box{
-        padding: 20px;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-        border: none;
-    .animated{
-        animation: wobbl 1s ease-in-out infinite alternate
-    }
-    @keyframes wobble{
-        0%{transform:rotate(-20dag)}
-    }
-    }
-
-}   
+}
+.navigationbar a:hover{
+    color: var(--main-col);
+}
