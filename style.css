@@ -1,12 +1,71 @@
+:root{
+    --main-col: rgb(133,43,226);
+
+}
+
+
+
+
 img{
     width: 400px;
 
 }
 
+
+
+
 body{
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: blueviolet;
+    background-color: var(--main-col);
     color: white;
+    
 
 }
+header{
+    text-align: left;
+    text-align: right;
+    vertical-align: top;
+    margin: 30px;
+}
+footer{
+    border: solid 5px rgb(12, 236, 169);
+    vertical-align: bottom;
+    padding: 20px;
+    margin: 80px;
+
+}
+div{
+    .grid{
+        display grid;
+        grid-template-areas: 
+        "a c"
+        "b c"
+        gap: 10px;
+        margin:30px;
+    }
+    
+    .first{
+        grid-area: a;
+        background-color: blue;
+    }
+
+    .second{
+        grid-area: b;
+        background-color: brown;
+    }
+    .box{
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        border: none;
+    .animated{
+        animation: wobbl 1s ease-in-out infinite alternate
+    }
+    @keyframes wobble{
+        0%{transform:rotate(-20dag)}
+    }
+    }
+
+}   
