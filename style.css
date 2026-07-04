@@ -2,6 +2,7 @@
     --main-col: rgb(69, 6, 46);
     --fill-col: rgb(127, 5, 95);
     --second-col: rgb(229, 164, 203);
+    cursor: none;
 }
 
 
@@ -146,4 +147,37 @@ footer{
 @keyframes fadeAnimation {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+.cursor-dot {
+  position: fixed;        /* fixed = zawsze w tym samym miejscu względem ekranu, nie strony */
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;     /* 50% = idealne kółko */
+  background: #ff6b6b;    /* kolor wypełnienia kropki */
+  pointer-events: none;   /* KLUCZOWE: kursor nie blokuje kliknięć w elementy pod spodem */
+  z-index: 9999;          /* wysoka wartość = element zawsze na wierzchu innych */
+  transform: translate(-50%, -50%); /* centruje kropkę dokładnie na pozycji myszki, a nie lewym górnym rogu */
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ff6b6b;  /* tylko obwódka, bez wypełnienia w środku */
+  pointer-events: none;
+  z-index: 9998;               /* o 1 mniej niż kropka, żeby kropka była zawsze na wierzchu obwódki */
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease; /* płynna zmiana rozmiaru/koloru przy hover */
+}
+
+/* Ta klasa jest dodawana przez JS gdy najedziesz na link/przycisk */
+.cursor-ring.hover {
+  width: 48px;       /* obwódka robi się większa */
+  height: 48px;
+  border-color: #4ecdc4;  /* i zmienia kolor */
 }
