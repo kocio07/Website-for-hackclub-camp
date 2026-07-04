@@ -46,3 +46,32 @@ interactiveElements.forEach(el => {
   // gdy wychodzi to wraca tak jak bylo
   el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
 });
+
+const kolory = ["red", "blue", "green", "orange", "purple"];
+
+
+function jednakniekonffetitylkotlo() {
+const conffeti = document.getElementById('confetti');
+  const losowyIndeks = Math.floor(Math.random() * kolory.length);
+  const wylosowanyKolor = kolory[losowyIndeks]
+  document.body.style.backgroundColor = wylosowanyKolor;
+}
+const conffeti = document.getElementById('confetti');
+if (conffeti){
+
+
+conffeti.addEventListener('click', jednakniekonffetitylkotlo);
+}
+
+
+function zegar() {
+  const teraz = new Date();
+  const godzina = teraz.getHours();
+  const minuta = teraz.getMinutes();
+  const sekunda = teraz.getSeconds();
+
+  const czas = godzina + ':' + minuta + ':' + sekunda;
+  document.getElementById('zegar').textContent = czas;
+}
+
+setInterval(zegar, 1000);

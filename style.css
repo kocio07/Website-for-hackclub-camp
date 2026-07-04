@@ -181,3 +181,29 @@ footer{
   height: 42px;       
   border-color: #b92aad;
 }
+#confetti {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  transform: translate(-20%, -10%);
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: none;
+  transition: transform 0.2s ease;
+
+}
+#confetti:hover {
+    
+    transform: translate(-20%, -10%) scale(1.1);
+
+}
+
+#zegar {
+    font-size: 24px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
