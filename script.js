@@ -1,4 +1,7 @@
-// hi jenin or someone else who is reading this, if u see this all of comments in this script is in my nation language so i can remember what is certain function doing i was using w3schools and google. thanks!
+// hi jenin or someone else who is reading this, if u see these comments in this script 
+// these are in my nation language so i can remember what
+//  is certain function doing i was using w3schools and other tutorials.
+// i also use Claude AI few times to explain something to me. Thanks!
 
 const dot = document.querySelector('.cursor-dot');
 const ring = document.querySelector('.cursor-ring');
@@ -30,16 +33,16 @@ function animate() {
   // odswiezenia ekranu 
   requestAnimationFrame(animate);
 }
-animate(); // uruchamiamy animację raz - dalej sama się powtarza w pętli
+animate(); // petla animacja
 
-// Znajdujemy wszystkie linki i przyciski na stronie
+// znajdudujen linki
 const interactiveElements = document.querySelectorAll('a, button');
 
-// Dla każdego z nich dodajemy nasłuchiwanie na najechanie/zjechanie myszką
+// hover 
 interactiveElements.forEach(el => {
-  // Gdy myszka WCHODZI na element - dodajemy klasę powiększającą obwódkę
+  //gdy wchodzi to sie powieksza
   el.addEventListener('mouseenter', () => ring.classList.add('hover'));
   
-  // Gdy myszka WYCHODZI z elementu - usuwamy tę klasę
+  // gdy wychodzi to wraca tak jak bylo
   el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
 });
